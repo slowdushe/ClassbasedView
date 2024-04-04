@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Edit news
+{% endblock %}
+
+{% block content %}
+    <h2>Edit News</h2>
+        <form action=" " method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-primary" value='Save'>
+        </form>
+{% endblock %}
+

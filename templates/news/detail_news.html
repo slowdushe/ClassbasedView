@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    {{ news.news_title }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{ news.news_title }}</h1>
+        <img src="{% static news.news_image %}" alt="{{ news.news_title }}" width="400" style="float:right;">
+        <p>{{ news.news_content }}</p>
+        <p>Author: {{ news.news_author }}</p>
+        <div>
+            <a href="{% url 'edit_news' pk=news.pk %}" class="btn btn-primary">Update</a>
+            <a href="{% url 'delete_news' pk=news.pk %}" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+{% endblock %}

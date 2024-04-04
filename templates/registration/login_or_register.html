@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container mt-3">
+        <h1>Akkauntingiz holatiga qarab Registratsiya yoki Login qismini tanlang !</h1>
+        <div class="mt-4 p-5 bg-primary text-white rounded">
+            <h1>Registratsiyadan O'tish</h1>
+            <p>Agar avval ro'yxatdan o'tmagan bo'lsangiz, ya'ni hali ushbu saytda yangi bo'lsangiz Registratsiya Qismi tugmasini ustiga bosing !
+            Va siz REGISTRATSIYA QILISH sahifasiga yo'naltirilasiz</p>
+            <h4><button><a style="text-decoration: none" href="{% url 'register_view' %}">Registratsiya Qismi</a></button></h4>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="mt-4 p-5 bg-primary text-white rounded">
+            <h1>Log In </h1>
+            <p>Avval ro'yxatdan o'tgansiz !</p>
+            <h4><button><a style="text-decoration: none" href="{% url 'login' %}">Log In Qismi</a></button></h4>
+        </div>
+    </div>
+
+</body>
+</html>

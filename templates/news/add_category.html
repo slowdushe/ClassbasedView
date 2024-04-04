@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Add category
+{% endblock %}
+
+{% block content %}
+    <div class="about-main-content">
+         <div style="margin: 50px">
+             <h2>Add New Category</h2>
+             <form action=" " method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+         </div>
+    </div>
+{% endblock %}

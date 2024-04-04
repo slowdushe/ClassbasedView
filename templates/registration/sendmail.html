@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Send message
+{% endblock %}
+
+{% block content %}
+    <form>
+        {% csrf_token %}
+        <input type="text" placeholder="Subject">
+
+        <input type="text" placeholder="Message">
+
+        <input type="email" placeholder="To Email">
+
+        <input type="submit" class="btn btn-primary" value="Send">
+
+    </form>
+{% endblock %}
